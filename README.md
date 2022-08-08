@@ -6,9 +6,9 @@ This project is kind of a blog where you can post whatever you want!
 
 ## Screenshot
 
-![](././src/images/screenshot-1.png)
-
 ![](././src/images/screenshot-2.png)
+
+![](././src/images/screenshot-1.png)
 
 
 
