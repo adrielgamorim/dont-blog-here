@@ -11,14 +11,14 @@ import { Navbar, Logo, LogoutButton } from './Components/styled/Navbar.styled';
 
 function App() {
   const [isAuth, setIsAuth] = useState(localStorage.getItem('isAuth'))
-
+  
   const logOut = () => {
     signOut(auth).then(() => {
       localStorage.clear();
       setIsAuth(false);
     })
   }
-
+  
   return (
     <>
       <GlobalStyle />
@@ -41,7 +41,7 @@ function App() {
                 <span />
                 <Link to='/create-post'> Create post </Link>
                 <span />
-                <LogoutButton onClick={logOut}>
+                <LogoutButton onClick={ logOut }>
                   Log Out
                 </LogoutButton>
               </>
