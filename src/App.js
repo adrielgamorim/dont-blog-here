@@ -1,4 +1,4 @@
-import { HashRouter as Router, Routes, Route, Link } from 'react-router-dom'
+import { HashRouter, Routes, Route, Link } from 'react-router-dom'
 import { useState } from 'react';
 import { auth } from './firebase-config'
 import { signOut } from 'firebase/auth';
@@ -23,40 +23,40 @@ function App() {
   return (
     <>
       <GlobalStyle />
-        <Router>
+        <HashRouter>
 
           <Logo>
             <Link to='/'> <img src="./images/logo.svg" alt="blog's logo" /> </Link>
             <Link to='/'><p>Don't Blog Here!</p></Link>
           </Logo>
 
-        <Navbar>
-          <Link to='/'> Home </Link>
-          {!isAuth ? (
-            <>
-              <span />
-              <Link to='/login'> Login </Link>
-            </>
-          ) : (
-            <>
-              <span />
-              <Link to='/create-post'> Create post </Link>
-              <span />
-              <LogoutButton onClick={userOut}>
-                Log Out
-              </LogoutButton>
-            </>
-          )}
-        </Navbar>
-          
-          <Routes>
-            <Route path='/' element={ <Home isAuth={isAuth} /> } />
-            <Route path='/create-post' element={ <CreatePost isAuth={isAuth} /> } />
-            <Route path='/login' element={ <Login setIsAuth={setIsAuth} /> } />
-            <Route path='/*' element={ <PageNotFound /> } />
-          </Routes>
+          <Navbar>
+            <Link to='/'> Home </Link>
+            {!isAuth ? (
+              <>
+                <span />
+                <Link to='/login'> Login </Link>
+              </>
+            ) : (
+              <>
+                <span />
+                <Link to='/create-post'> Create post </Link>
+                <span />
+                <LogoutButton onClick={userOut}>
+                  Log Out
+                </LogoutButton>
+              </>
+            )}
+          </Navbar>
+            
+            <Routes>
+              <Route exact path='/' element={ <Home isAuth={isAuth} /> } />
+              <Route path='/create-post' element={ <CreatePost isAuth={isAuth} /> } />
+              <Route path='/login' element={ <Login setIsAuth={setIsAuth} /> } />
+              <Route path='/*' element={ <PageNotFound /> } />
+            </Routes>
 
-        </Router>
+        </HashRouter>
     </>
   );
 }
