@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom'
+import { HashRouter as Router, Routes, Route, Link } from 'react-router-dom'
 import { useState } from 'react';
 import { auth } from './firebase-config'
 import { signOut } from 'firebase/auth';
