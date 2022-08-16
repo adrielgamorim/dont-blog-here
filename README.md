@@ -2,7 +2,7 @@
 
 This project is kind of a blog where you can post whatever you want!
 
-
+<br />
 
 ## Screenshot
 
@@ -10,13 +10,13 @@ This project is kind of a blog where you can post whatever you want!
 
 ![](././src/images/screenshot-1.png)
 
-
+<br />
 
 ## Links
 
 - Live Site URL: [Don't Blog Here](https://adrielgamorim.github.io/dont-blog-here/)
 
-
+<br />
 
 ## Rules
 
@@ -25,9 +25,8 @@ This project is kind of a blog where you can post whatever you want!
 - No NSFW content (even if it's just text);
 - And the rest of the usual stuff you shouldn't post publicly.
 
-
+<br />
 
 ## Author
 
-- Website - [Adriel Amorim](https://adrielgamorim.github.io/Portfolio/)
 - LinkedIn - [Adriel Amorim](https://www.linkedin.com/in/adrielamorim/)
